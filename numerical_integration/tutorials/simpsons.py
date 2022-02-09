@@ -2,8 +2,8 @@
 # E-mail: gerry.gralton@uwa.edu.au
 # Date: 07/02/2022
 
-
-# First thing to do is import the 'math' module so we can do operations like take logs
+# First thing to do is import the 'math' module so we can do operations
+# like take logs
 import math
 
 # Let's start with a function that we need to integrate

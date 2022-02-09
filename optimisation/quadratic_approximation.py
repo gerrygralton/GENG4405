@@ -20,7 +20,7 @@ def find_quad_root(function, x_l, x_m, x_u):
         / (2*(f_l * (x_m - x_u) + f_m*(x_u-x_l) + f_u * (x_l-x_m)))
 
 # We have data so let's have a look at it before we do anything else
-x = np.arange(0, 3, 0.1)    # Generate a list with every number from 0 to three in steps of 0.1
+x = np.arange(0, 3, 0.1)    # Generate a list with every number from 0 to 3 in steps of 0.1
 plt.plot(x, func(x))
 # plt.show()
 

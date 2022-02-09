@@ -35,7 +35,7 @@ def recursive_golden(function, x_l, x_2, x_3, x_u, count, tol):
     return sol, count
 
 # We have data so let's have a look at it before we do anything else
-x = np.arange(0, 3, 0.1)    # Generate a list with every number from 0 to three in steps of 0.1
+x = np.arange(0, 3, 0.1)    # Generate a list with every number from 0 to 3 in steps of 0.1
 plt.plot(x, func(x))
 # plt.show()
 
