@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt     # For plotting
 def func(u):
     return 2000 * u / (8.1 * u ** 2 + 1200)
 
-# Now we need to define the some variables for the Trapezoid method:
+# Now we need to define some variables for the Trapezoid method:
 a = 0                   # Lower integration bound
 b = 30                  # Upper integration bound
 n = 5                   # Number of partitions
