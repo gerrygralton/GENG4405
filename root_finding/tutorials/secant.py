@@ -23,7 +23,7 @@ x_1 = 2.5
 # This is so we can calculate error before we start
 x_2 = x_1 - func(x_1) * (x_1 - x_0) / (func(x_1) - func(x_0))
 # we'll store error in a list so we can see how the error converges afterwards
-error = [(x_2 - x_1) / x_2]
+error = [np.abs(x_2 - x_1) / x_2]
 
 # Time for looping
 tol = 1e-4
@@ -32,7 +32,7 @@ while (error[-1] > tol):
     x_0 = x_1
     x_1 = x_2
     x_2 = x_1 - func(x_1) * (x_1 - x_0) / (func(x_1) - func(x_0))
-    error.append((x_2 - x_1) / x_2)
+    error.append(np.abs(x_2 - x_1) / x_2)
 
     count += 1
 
