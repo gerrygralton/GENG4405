@@ -1,17 +1,15 @@
 # Author: Gerry Gralton
 # E-mail: gerry.gralton@uwa.edu.au
 # Date: 09/02/2022
-
-'''
-This function is a standard implementation of Euler's method but involves a
-slight twist in that we integrate two functions at the same time
-Arguments:
-    func1 - the first function to be integrated
-    func2 - the second function to be integrated
-    steps - 1D array of each evaluation point
-    u0 - inital condition
-    w0 - initial condition
-'''
+#
+# This function is a standard implementation of Euler's method but involves a
+# slight twist in that we integrate two functions at the same time
+# Arguments:
+#     func1 - the first function to be integrated
+#     func2 - the second function to be integrated
+#     steps - 1D array of each evaluation point
+#     u0 - inital condition
+#     w0 - initial condition
 
 import numpy as np
 
