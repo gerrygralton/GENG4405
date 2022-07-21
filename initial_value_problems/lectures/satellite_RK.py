@@ -23,7 +23,7 @@ T = (60*60*24)*5
 # order equations for (x', y', vx', vy') respectively.  These
 # derivatives must be returned by the function dydt().
 
-results = solve_ivp(dydt, (t0, T), y0, method="RK45", rtol=1e-4, atol=1e-4);
+results = solve_ivp(dydt, (t0, T), y0, method="RK45", rtol=1e-4, atol=1e-4)
 
 # The x,y coordinates of the orbit are now contained in y(:, 1), y(:, 1).
 # This orbit is then plotted.

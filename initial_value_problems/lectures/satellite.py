@@ -22,7 +22,7 @@ T = (60*60*24)*5
 # order equations for (x', y', vx', vy') respectively.  These
 # derivatives must be returned by the function dydt().
 
-y, steps = euler_vector(t0, T, y0, N, dydt);
+y, steps = euler_vector(t0, T, y0, N, dydt)
 
 # The x,y coordinates of the orbit are now contained in y(:, 1), y(:, 1).
 # This orbit is then plotted.
