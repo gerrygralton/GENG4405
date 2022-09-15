@@ -41,4 +41,4 @@ def trapezoid(f_name: str, a, b, n: int):
     plt.show()
 
     # Compute the integral:
-    return h/2 * (f_name(a) + 2 * np.sum(y) + f_name(b))
+    return h/2 * (f_name(a) + 2 * np.sum(y[range(1, n)]) + f_name(b))

@@ -11,7 +11,7 @@ def func(u):
     return 2000 * u / (8.1 * u ** 2 + 1200)
 
 # Now we need to define some variables for the Trapezoid method:
-a = 0                   # Lower integration bound
+a = 15                   # Lower integration bound
 b = 30                  # Upper integration bound
 n = 5                   # Number of partitions
 h = (b - a) / n         # Width of each partition

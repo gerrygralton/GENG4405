@@ -5,7 +5,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def simpsons(f_name: str, a, b, k: int):
+def simpsons(f_name, a, b, k: int):
 # simpsons() will integrate the function f_name over the interval
 #   a<x<b using n = 2^k panels and return the intergral.
 #   The use is:
@@ -20,20 +20,20 @@ def simpsons(f_name: str, a, b, k: int):
     evensum = 0
     oddsum = 0
 
-    x = np.zeros(n+1)
-    y = np.zeros(n+1)
+    x = np.zeros(n-1)
+    y = np.zeros(n-1)
 
-    for i in range(n+1):
-        x[i] = a + i * h
-        y[i] = f_name(x[i])
+    for i in range(1, n):
+        x[i-1] = a + (i) * h
+        y[i-1] = f_name(x[i-1])
 
         if (i % 2 == 0):
-            evensum += y[i]
+            evensum += y[i-1]
         else:
-            oddsum += y[i]
+            oddsum += y[i-1]
 
     # Then we can plot our data
-    for i in range(n+1):
+    for i in range(n-1):
         plt.plot([x[i], x[i]], [0, y[i]], 'darkblue')   # Vertical lines
 
     plt.plot(np.arange(a, b, h/100),
