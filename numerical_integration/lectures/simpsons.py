@@ -3,7 +3,7 @@
 # Date: 30/06/2022
 
 
-def simpsons(f_name: str, a: int, b: int, k: int)
+def simpsons(f_name: str, a, b, k: int):
 # simpsons() will integrate the function f_name over the interval
 #   a<x<b using n = 2^k panels and return the intergral.
 #   The use is:

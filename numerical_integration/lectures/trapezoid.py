@@ -2,7 +2,7 @@
 # E-mail: gerry.gralton@uwa.edu.au
 # Date: 30/06/2022
 
-def trapezoid(f_name: str, a: int, b: int, n: int)
+def trapezoid(f_name: str, a, b, n: int):
 
     # trapezoid() integrates function f_name in the interval [a b]
     # using trapezoidal rule (on n intervals) and
