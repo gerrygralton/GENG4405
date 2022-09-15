@@ -2,6 +2,9 @@
 # E-mail: gerry.gralton@uwa.edu.au
 # Date: 30/06/2022
 
+import numpy as np
+import matplotlib.pyplot as plt
+
 def trapezoid(f_name: str, a, b, n: int):
 
     # trapezoid() integrates function f_name in the interval [a b]
@@ -12,15 +15,30 @@ def trapezoid(f_name: str, a, b, n: int):
 
     h = (b - a) / n     # Width of each partition
 
-    midsum = 0          # Initialise values for use with looping
-
     # Now we need to calculate the function values at the interior points
     # We can do that with a `for` loop
     # Don't forget that range() doesn't include the last number
 
-    for i in range(1, n):
-        x_i = a + i * h
-        midsum += f_name(x_i)
+    x = np.arange(a, b+h, h)
+    y = np.zeros(n+1)
+
+    for i in range(n+1):
+        y[i] = f_name(x[i])
+
+    # Then we can plot our data
+    plt.plot(x, y, 'darkblue', label="Trapezoid approximation")
+
+    for i in range(n+1):
+        plt.plot([x[i], x[i]], [0, y[i]], 'darkblue')   # Vertical lines
+
+    plt.plot(np.arange(a, b, h/100),
+             [f_name(point) for point in np.arange(a, b, h/100)],
+             'red', label="Real curve")                         # Accurate curve
+
+    plt.xlabel("X")
+    plt.ylabel("Y")
+    plt.legend(loc="upper right")
+    plt.show()
 
     # Compute the integral:
-    return h/2 * (f_name(a) + 2 * midsum + f_name(b))
+    return h/2 * (f_name(a) + 2 * np.sum(y) + f_name(b))
