@@ -15,6 +15,9 @@ def simpsons(f_name: str, a, b, k: int):
     n = 2**k # Number of partitions
     h = (b - a) / n
 
+    evensum = 0
+    oddsum = 0
+
     for i in range(1, n):
         x_i = a + i * h
         if (i % 2 == 0):
