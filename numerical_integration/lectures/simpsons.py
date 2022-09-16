@@ -6,10 +6,17 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def simpsons(f_name, a, b, k: int):
-# simpsons() will integrate the function f_name over the interval
-#   a<x<b using n = 2^k panels and return the intergral.
+#   simpsons() will integrate the function f_name over the interval
+#   a<x<b using n = 2^k panels, plot it and return the intergral.
 #   The use is:
 #        s = simpsons(f_name,a,b,k)
+#   where f_name is the name of the function to integrate,
+#   a and b are the integral bounds and 2^k is the number of partitions.
+#
+#   To import this into an ineractive python environment,
+#   ensure the working directory contains this file, type
+#       `from simpsons import all`
+#   and then call the function as outlined above.
 # ==========================================================
     if k<=0:
         error("k must be a positive integer")

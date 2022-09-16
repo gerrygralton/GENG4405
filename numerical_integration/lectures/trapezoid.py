@@ -5,14 +5,20 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def trapezoid(f_name: str, a, b, n: int):
-
-    # trapezoid() integrates function f_name in the interval [a b]
-    # using trapezoidal rule (on n intervals) and
-    # illustrates graphically the procedure.
-    # The function is called as:
-    # trapezoid(f_name,a,b,n)
-
+def trapezoid(f_name, a, b, n: int):
+#   trapezoid() integrates function f_name in the interval [a b]
+#   using trapezoidal rule (on n intervals) and
+#   illustrates graphically the procedure.
+#   The function is called as:
+#       trapezoid(f_name,a,b,n)
+#   where f_name is the name of the function to integrate,
+#   a and b are the integral bounds and n is the number of partitions.
+#
+#   To import this into an ineractive python environment,
+#   ensure the working directory contains this file, type
+#       `from trapezoid import all`
+#   and then call the function as outlined above.
+# ==========================================================
     h = (b - a) / n     # Width of each partition
 
     # Now we need to calculate the function values at the interior points
