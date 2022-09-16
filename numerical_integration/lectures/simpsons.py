@@ -19,7 +19,8 @@ def simpsons(f_name, a, b, k: int):
 #   and then call the function as outlined above.
 # ==========================================================
     if k<=0:
-        error("k must be a positive integer")
+        print("k must be a positive integer")
+        return
 # ==========================================================
     n = 2**k # Number of partitions
     h = (b - a) / n
