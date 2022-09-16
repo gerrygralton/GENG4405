@@ -16,7 +16,7 @@ def trapezoid(f_name, a, b, n: int):
 #
 #   To import this into an ineractive python environment,
 #   ensure the working directory contains this file, type
-#       `from trapezoid import all`
+#       `from trapezoid import trapezoid`
 #   and then call the function as outlined above.
 # ==========================================================
     h = (b - a) / n     # Width of each partition

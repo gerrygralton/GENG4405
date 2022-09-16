@@ -15,7 +15,7 @@ def simpsons(f_name, a, b, k: int):
 #
 #   To import this into an ineractive python environment,
 #   ensure the working directory contains this file, type
-#       `from simpsons import all`
+#       `from simpsons import simpsons`
 #   and then call the function as outlined above.
 # ==========================================================
     if k<=0:
