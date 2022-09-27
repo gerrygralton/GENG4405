@@ -54,6 +54,8 @@ def bisection(func, x_lower, x_upper):
         if (count > count_limit):
             print("Iteration limit exceeded")
             break
+        
+        count += 1
 
     plt.show()
     print("Root at %.3f" % x_middle)
