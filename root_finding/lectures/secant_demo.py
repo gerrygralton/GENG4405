@@ -12,10 +12,10 @@ def func(x):
     return np.cos(x) * np.cosh(x) + 1
 
 # Define the equation for the terminal velocity example
-def func(x):
-    g = 9.81
-    M = 0.002
-    return 1.35e-5 * x**1.5 + 1.18e-5 * x**2 - g * M
+# def func(x):
+#     g = 9.81
+#     M = 0.002
+#     return 1.35e-5 * x**1.5 + 1.18e-5 * x**2 - g * M
 
 # Secant method requires two inital guesses
 x_0 = 1.2
